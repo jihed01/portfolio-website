@@ -1,0 +1,115 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="À propos — Jihed | Ingénieure IA">
+  <section class="max-w-4xl mx-auto px-6 py-12 space-y-16">
+    
+    <!-- Hero / Intro Storytelling -->
+    <div class="space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold border border-emerald-500/20">
+        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+        AI Engineer & Vision Specialist
+      </div>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-white leading-tight">
+        Concevoir des systèmes d'IA robustes pour déchiffrer le monde documentaire.
+      </h1>
+
+      <p class="text-zinc-400 text-base md:text-lg leading-relaxed">
+        Issue d'une double formation en <strong class="text-zinc-200">Ingénierie Mécatronique</strong> et en <strong class="text-zinc-200">Master 2 Traitement du Signal et de l'Image</strong>, je me spécialise dans la résolution de problèmes complexes à l'intersection de la <span class="text-emerald-400">Computer Vision</span> et des <span class="text-emerald-400">Vision-Language Models (VLM)</span>.
+      </p>
+
+      <p class="text-zinc-400 text-base leading-relaxed">
+        Mon objectif est de transformer des flux de documents hétérogènes, dégradés ou denses (factures, plans, rapports techniques) en structures de données directement exploitables en production, en combinant preprocessing bas niveau et modèles fondateurs récents.
+      </p>
+    </div>
+
+    <!-- Impact & Achievements (Chiffres Clés) -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/50 space-y-2">
+        <p class="text-3xl font-bold font-mono text-emerald-400">-15.4%</p>
+        <p class="text-sm font-semibold text-white">Taux d'Erreur Caractère (CER)</p>
+        <p class="text-xs text-zinc-400">Grâce aux pipelines de restauration d'images et correction d'homographie sous OpenCV.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/50 space-y-2">
+        <p class="text-3xl font-bold font-mono text-emerald-400">89.2%</p>
+        <p class="text-sm font-semibold text-white">F1-Score en KIE</p>
+        <p class="text-xs text-zinc-400">Sur l'extraction d'information clé via le fine-tuning de modèles multimodaux LayoutLMv3.</p>
+      </div>
+
+      <div class="p-6 rounded-xl border border-zinc-800 bg-zinc-900/50 space-y-2">
+        <p class="text-3xl font-bold font-mono text-emerald-400">&lt; 120ms</p>
+        <p class="text-sm font-semibold text-white">Latence en Production</p>
+        <p class="text-xs text-zinc-400">Services d'inférence conteneurisés Docker & FastAPI optimisés pour les pipelines haute fréquence.</p>
+      </div>
+    </div>
+
+    <!-- Philosophie d'Ingénierie -->
+    <div class="space-y-6">
+      <h2 class="text-xl md:text-2xl font-bold text-white tracking-tight border-b border-zinc-800 pb-3">
+        Mon approche technique
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-3">
+          <h3 class="text-base font-semibold text-emerald-400">1. Du Notebook à la Production (MLOps)</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Un modèle performant ne sert à rien s'il n'est pas déployable. Je conçois mes projets avec du code typé (Pydantic, TypeScript), des tests automatisés (Pytest) et des architectures microservices prêtes à l'emploi (Docker, vLLM).
+          </p>
+        </div>
+
+        <div class="space-y-3">
+          <h3 class="text-base font-semibold text-emerald-400">2. RAG Visuel & OCR-Free Parsing</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            L'OCR traditionnel montre ses limites sur les mises en page complexes. J'exploite les approches modernes telles que ColPali, Donut et les architectures visuelles de bout en bout pour préserver la structure spatiale native des documents.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Parcours Académique & Technique -->
+    <div class="space-y-6">
+      <h2 class="text-xl md:text-2xl font-bold text-white tracking-tight border-b border-zinc-800 pb-3">
+        Parcours & Compétences
+      </h2>
+
+      <div class="space-y-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+          <div>
+            <h3 class="text-base font-semibold text-white">Master 2 — Traitement du Signal et de l'Image</h3>
+            <p class="text-sm text-zinc-400">Spécialité Computer Vision, Apprentissage Profond & Analyse d'Images</p>
+          </div>
+          <span class="text-xs font-mono text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded border border-emerald-500/20">M2 Recherche / Pro</span>
+        </div>
+
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-2">
+          <div>
+            <h3 class="text-base font-semibold text-white">Diplôme d'Ingénieur en Mécatronique</h3>
+            <p class="text-sm text-zinc-400">Systèmes intelligents, Systèmes embarqués, Automatique & Programmation C++/Python</p>
+          </div>
+          <span class="text-xs font-mono text-zinc-400 bg-zinc-800 px-2.5 py-1 rounded">Diplôme d'Ingénieur</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action (CTA) -->
+    <div class="p-8 rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-950 border border-zinc-800 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div>
+        <h3 class="text-lg font-bold text-white">Intéressé(e) par une collaboration ?</h3>
+        <p class="text-sm text-zinc-400 mt-1">Consultez mes projets récents ou téléchargez mon CV au format PDF.</p>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <a href="/projects" class="px-4 py-2.5 rounded-lg bg-zinc-800 hover:bg-zinc-700 text-white text-sm font-medium transition-colors">
+          Voir les projets
+        </a>
+        <a href="/contact" class="px-4 py-2.5 rounded-lg bg-emerald-500 hover:bg-emerald-400 text-zinc-950 text-sm font-semibold transition-colors">
+          Me contacter
+        </a>
+      </div>
+    </div>
+
+  </section>
+</Layout>

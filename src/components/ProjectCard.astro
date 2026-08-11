@@ -1,0 +1,40 @@
+---
+import type { Project } from '../data/projects';
+
+interface Props {
+  project: Project;
+}
+
+const { project } = Astro.props;
+---
+
+<div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-emerald-500/50 transition-all">
+  <div class="flex justify-between items-start mb-4">
+    <span class="text-xs font-mono text-emerald-400 bg-emerald-950/50 px-2.5 py-1 rounded-full border border-emerald-800/50">
+      {project.category}
+    </span>
+    <span class="text-xs font-mono text-zinc-400">{project.metrics}</span>
+  </div>
+  
+  <h3 class="text-xl font-bold text-white mb-2">{project.title}</h3>
+  <p class="text-zinc-400 text-sm mb-4 leading-relaxed">{project.description}</p>
+  
+  <div class="flex flex-wrap gap-2 mb-6">
+    {project.tags.map((tag) => (
+      <span class="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded">
+        {tag}
+      </span>
+    ))}
+  </div>
+  
+  <div class="flex gap-4 pt-2 border-t border-zinc-800/60">
+    <a href={project.githubUrl} target="_blank" class="text-xs text-zinc-300 hover:text-white font-medium flex items-center gap-1">
+      Code GitHub →
+    </a>
+    {project.demoUrl && (
+      <a href={project.demoUrl} target="_blank" class="text-xs text-emerald-400 hover:text-emerald-300 font-medium flex items-center gap-1">
+        Démo Live ⚡
+      </a>
+    )}
+  </div>
+</div>

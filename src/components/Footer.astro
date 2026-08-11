@@ -1,0 +1,77 @@
+---
+const currentYear = new Date().getFullYear();
+
+const email = "gihedaloui@gmail.com";
+const location = "Paris, France";
+
+// Vos pseudos / handles
+const githubUser = "jihed01";
+const githubUrl = `https://github.com/${githubUser}`;
+
+const linkedinUser = "jihed-aloui";
+const linkedinUrl = `https://www.linkedin.com/in/${linkedinUser}`;
+
+const huggingfaceUser = "jihed01";
+const huggingfaceUrl = `https://huggingface.co/${huggingfaceUser}`;
+---
+
+<footer class="border-t border-zinc-800 bg-zinc-950 text-zinc-400 py-12 px-6 mt-20 w-full">
+  <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10 mb-12">
+    
+    <!-- Colonne 1 : Branding -->
+    <div class="flex flex-col gap-3">
+      <a href="/" class="text-white font-bold text-lg hover:text-emerald-400 transition-colors">
+        Jihed<span class="text-emerald-400">.ai</span>
+      </a>
+      <p class="text-sm text-zinc-400 leading-relaxed">
+        Ingénieure IA spécialisée en Document Intelligence, Visual RAG et Computer Vision.
+      </p>
+      <p class="text-xs text-zinc-500">📍 {location}</p>
+    </div>
+
+    <!-- Colonne 2 : Navigation -->
+    <div>
+      <h3 class="text-xs font-semibold text-white tracking-wider uppercase mb-4">Navigation</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="hover:text-emerald-400 transition-colors">Accueil</a></li>
+        <li><a href="/about" class="hover:text-emerald-400 transition-colors">À propos</a></li>
+        <li><a href="/projects" class="hover:text-emerald-400 transition-colors">Projets</a></li>
+        <li><a href="/contact" class="hover:text-emerald-400 transition-colors">Contact & CV</a></li>
+      </ul>
+    </div>
+
+    <!-- Colonne 3 : Contact & Réseaux avec pseudos explicites en vert -->
+    <div>
+      <h3 class="text-xs font-semibold text-white tracking-wider uppercase mb-4">Réseaux & Contact</h3>
+      <ul class="space-y-2.5 text-sm">
+        <li>
+          <a href={`mailto:${email}`} class="text-emerald-400 hover:underline font-mono text-xs block truncate">
+            ✉️ {email}
+          </a>
+        </li>
+        <li>
+          <a href={githubUrl} target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-mono text-xs block truncate">
+            🐙 github.com/{githubUser}
+          </a>
+        </li>
+        <li>
+          <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-mono text-xs block truncate">
+            💼 in/{linkedinUser}
+          </a>
+        </li>
+        <li>
+          <a href={huggingfaceUrl} target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-mono text-xs block truncate">
+            🤗 hf.co/{huggingfaceUser}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="max-w-5xl mx-auto pt-8 border-t border-zinc-900 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
+    <p>© {currentYear} Jihed. Tous droits réservés.</p>
+    <p>Conçu avec <span class="text-zinc-300">Astro</span> & <span class="text-zinc-300">Tailwind CSS</span></p>
+  </div>
+</footer>

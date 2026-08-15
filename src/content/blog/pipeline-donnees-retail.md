@@ -1,4 +1,4 @@
-```markdown
+
 ---
 title: "Pipeline de Données ETL & Analytics du Trafic Retail"
 description: "Architecture complète d'un pipeline de données pour l'analyse du trafic en magasin : ingestion, détection d'anomalies, orchestration Airflow, API FastAPI et dashboard Streamlit."
@@ -23,7 +23,7 @@ Ce projet implémente une pipeline de données automatisée pour l'analyse du tr
 
 ### Flux de Données (Data Flow)
 
-```text
+text
 📁 Données Brutes (CSV)
     ↓
 🔄 Ingestion & Fusion (Python / Pandas)
@@ -40,7 +40,7 @@ Ce projet implémente une pipeline de données automatisée pour l'analyse du tr
     ↓
 📱 Dashboard Interactif (Streamlit + Plotly)
 
-```
+
 
 ---
 
@@ -139,6 +139,3 @@ L'application Streamlit fournit une interface d'exploration pour les équipes op
 
 * **Code source GitHub :** [Data-pipeline sur GitHub](https://www.google.com/search?q=https://github.com/jihed01/Data-pipeline)
 
-```
-
-```

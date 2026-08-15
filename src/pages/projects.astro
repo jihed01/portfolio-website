@@ -32,11 +32,20 @@ const projects = [
   {
     title: "Donut OCR-Free Parser",
     category: "End-to-End Parsing",
-    metrics: "JSON Structuré de bout en bout",
+    metrics: "JSON Structuré",
     description: "Modèle de parsing de documents de type OCR-free transformant directement des images de rapports complexes en objets JSON typés.",
     tags: ["Donut", "Transformers", "PyTorch", "FastAPI"],
     github: "https://github.com/jihed01/donut-ocr-parser",
     demo: null
+  },
+  {
+    title: "Pipeline ETL & Analytics Trafic Retail",
+    category: "Data Engineering / Analytics",
+    metrics: "Anomalies ±50% | Parquet",
+    description: "Pipeline de données complète pour l'analyse en temps réel du trafic en magasin, détection d'anomalies (±50%) et dashboard Streamlit.",
+    tags: ["Python", "Pandas", "FastAPI", "Streamlit", "Airflow", "Parquet"],
+    github: "https://github.com/jihed01/Data-pipeline",
+    demo: "https://share.streamlit.io/jihed01/Data-pipeline"
   }
 ];
 ---
@@ -81,7 +90,7 @@ const projects = [
 
             <!-- Tags techniques -->
             <div class="flex flex-wrap gap-2 pt-2">
-              {project.tags.map((tag) => (
+              {project.tags?.map((tag) => (
                 <span class="px-2.5 py-1 rounded-md bg-zinc-800 text-zinc-300 text-xs font-mono">
                   {tag}
                 </span>
@@ -91,9 +100,11 @@ const projects = [
 
           <!-- Liens d'action -->
           <div class="pt-6 mt-6 border-t border-zinc-800/80 flex items-center gap-6 text-sm">
-            <a href={project.github} target="_blank" rel="noopener noreferrer" class="text-white hover:text-emerald-400 font-medium transition-colors flex items-center gap-1.5">
-              Code GitHub →
-            </a>
+            {project.github && (
+              <a href={project.github} target="_blank" rel="noopener noreferrer" class="text-white hover:text-emerald-400 font-medium transition-colors flex items-center gap-1.5">
+                Code GitHub →
+              </a>
+            )}
             {project.demo && (
               <a href={project.demo} target="_blank" rel="noopener noreferrer" class="text-emerald-400 hover:underline font-medium flex items-center gap-1.5">
                 Démo Live ⚡

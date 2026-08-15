@@ -10,4 +10,5 @@ const blog = defineCollection({
   }),
 });
 
+// L'export obligatoire pour qu'Astro reconnaisse la collection :
 export const collections = { blog };
